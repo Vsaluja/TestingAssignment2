@@ -30,8 +30,9 @@ app.use('/api/albums', albumRouter);
 app.use('/api/tracks', trackRouter);
 
 
-app.listen(PORT, () => {
+const connection = app.listen(PORT, () => {
     console.log("Server running on Port", PORT);
 })
 
-module.exports = app;
+
+module.exports = { app, connection };
