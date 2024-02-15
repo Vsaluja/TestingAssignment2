@@ -33,3 +33,5 @@ app.use('/api/tracks', trackRouter);
 app.listen(PORT, () => {
     console.log("Server running on Port", PORT);
 })
+
+module.exports = app;
