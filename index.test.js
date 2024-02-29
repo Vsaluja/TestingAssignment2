@@ -9,4 +9,17 @@ describe('Testing the api endpoint', () => {
         expect(response.statusCode).toBe(200);
         connection.close();
     });
+
+    test('should return the list of all the themes', async () => {
+        const response = await request(app).get('/api/themes')
+        expect(response.statusCode).toBe(200);
+        connection.close();
+    });
+
+    test('should return the list of all mediatypes', async () => {
+        const response = await request(app).get('/api/mediatypes')
+        expect(response.statusCode).toBe(200);
+        connection.close();
+    });
+
 })
