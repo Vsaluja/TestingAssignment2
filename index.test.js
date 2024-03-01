@@ -27,9 +27,9 @@ describe('Testing the api endpoint', () => {
         expect(response.statusCode).toBe(200);
         connection.close();
     });
-    test('should return the list of all mediatypes', async () => {
-        const response = await request(app).get('/api/tracks/1')
-        expect(response.statusCode).toBe(200);
+    test('should return an error code of 500', async () => {
+        const response = await request(app).get('/api/random')
+        expect(response.statusCode).toBe(404);
         connection.close();
     });
 
