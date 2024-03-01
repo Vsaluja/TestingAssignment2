@@ -22,4 +22,16 @@ describe('Testing the api endpoint', () => {
         connection.close();
     });
 
+    test('should return the list of all albums', async () => {
+        const response = await request(app).get('/api/albums/1')
+        expect(response.statusCode).toBe(200);
+        connection.close();
+    });
+    test('should return the list of all mediatypes', async () => {
+        const response = await request(app).get('/api/tracks/1')
+        expect(response.statusCode).toBe(200);
+        connection.close();
+    });
+
+
 })
